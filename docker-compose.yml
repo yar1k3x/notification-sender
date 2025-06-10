@@ -1,0 +1,22 @@
+services:
+  notification-sender:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # depends_on:
+    #   - mysql  # указываем ИМЯ СЕРВИСА, не container_name!
+    # environment:
+      # DB_USER: root
+      # DB_PASSWORD: root
+      # DB_HOST: mysql  # имя сервиса в сети Docker
+      # DB_PORT: 3306
+      # DB_NAME: drs_db
+    ports:
+      - "50052:50052"
+    restart: unless-stopped
+    networks:
+      - backend
+
+networks:
+  backend:
+    external: true

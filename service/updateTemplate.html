@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Status Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2fdf7;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 32px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 12px rgba(0, 128, 0, 0.05);
+            border: 1px solid #d8f3dc;
+        }
+        .header {
+            text-align: center;
+            color: #2d6a4f;
+        }
+        .status-box {
+            background-color: #d8f3dc;
+            padding: 16px;
+            margin: 24px 0;
+            border-left: 5px solid #40916c;
+            border-radius: 6px;
+            font-size: 16px;
+            color: #1b4332;
+        }
+        .footer {
+            margin-top: 32px;
+            font-size: 14px;
+            color: #555;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 20px;
+            background-color: #52b788;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Здравствуйте, {{ .Name }}!</h1>
+        <p>Мы хотим сообщить вам, что статус вашего заказа был обновлён.</p>
+
+        <div class="status-box">
+            <strong>Статус изменён:</strong><br>
+            <strong>"{{ .OldStatus }}" → "{{ .NewStatus }}"</strong>
+        </div>
+
+        <p>Вы можете перейти в ваш личный кабинет, чтобы увидеть детали и отслеживать дальнейшие изменения.</p>
+
+        <a href="{{ .OrderLink }}" class="btn">Перейти к заказу</a>
+
+        <div class="footer">
+            Спасибо, что пользуетесь нашим сервисом!<br>
+            Команда поддержки Delivery Tracker
+        </div>
+    </div>
+</body>
+</html>
