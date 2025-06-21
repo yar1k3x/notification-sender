@@ -24,7 +24,7 @@ func SendCreateEmail(to string, subject string, templatePath string, requestId i
 		RequestId int32
 		OrderLink string
 	}{
-		Name:      "Rukablud",
+		Name:      "Кулишко Ярослав",
 		RequestId: requestId,
 		OrderLink: fmt.Sprintf("https://example.com/orders/%d", requestId),
 	})

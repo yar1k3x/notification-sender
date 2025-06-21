@@ -27,4 +27,4 @@ WORKDIR /root/
 COPY --from=builder /app/main .
 
 # Указываем команду по умолчанию
-CMD ["./main"]
+CMD ["./main"] 
