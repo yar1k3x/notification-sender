@@ -25,7 +25,7 @@ func SendUpdateEmail(to string, subject string, templatePath string, requestId i
 		NewStatus string
 		OrderLink string
 	}{
-		Name:      "Rukablud",
+		Name:      "Кулишко Ярослав",
 		OldStatus: oldStatus,
 		NewStatus: newStatus,
 		OrderLink: fmt.Sprintf("https://example.com/orders/%d", requestId),
